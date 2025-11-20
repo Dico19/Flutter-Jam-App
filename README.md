@@ -1,3 +1,14 @@
+TUGAS MEMBUAT APLIKASI FLUTTER (MINIMAAL 5 LAYER)
+
+NAMA MAHASISWA PEMBUAT : Ahmad Na'im Bashiroh
+NIM : 14022300034
+MATA KULIAH : PEMROGRAMAN MOBILE
+DOSEN PENGAMPU : Faisal Akhmad S.Kom., M.Kom.
+PRODI SISTEM INFORMASI
+FAKULTAS ILMU KOMPUTER
+UNIVERSITAS BINA BANGSA
+
+
 📱 Aplikasi Jam — Flutter
 Aplikasi ini adalah aplikasi jam multifungsi berbasis Flutter, dengan 5 fitur utama:
 1. Beranda
