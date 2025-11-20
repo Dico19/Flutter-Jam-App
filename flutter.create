@@ -1,0 +1,230 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const JamApp());
+}
+
+class JamApp extends StatelessWidget {
+  const JamApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Aplikasi Jam',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true,
+      ),
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _selectedIndex = 0;
+
+  final _pages = const [
+    BerandaPage(),
+    AlarmPage(),
+  ];
+
+  String _getTitle() {
+    if (_selectedIndex == 0) return 'Beranda';
+    return 'Alarm';
+  }
+
+  void _onNavTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Aplikasi Jam - ${_getTitle()}'),
+        centerTitle: true,
+      ),
+      body: _pages[_selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: _onNavTapped,
+        type: BottomNavigationBarType.fixed,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Beranda',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.alarm),
+            label: 'Alarm',
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// =================== LAYER 1: BERANDA ===================
+class BerandaPage extends StatelessWidget {
+  const BerandaPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Card(
+          elevation: 4,
+          child: Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                Icon(Icons.watch_later_outlined, size: 64),
+                SizedBox(height: 16),
+                Text(
+                  'Selamat datang di Aplikasi Jam',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 12),
+                Text(
+                  'Di sini kamu bisa mengatur alarm harian.\n\n'
+                  'Gunakan menu Alarm di bawah untuk menyetel jam alarm.',
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// =================== LAYER 2: ALARM ===================
+class AlarmPage extends StatefulWidget {
+  const AlarmPage({super.key});
+
+  @override
+  State<AlarmPage> createState() => _AlarmPageState();
+}
+
+class _AlarmPageState extends State<AlarmPage> {
+  TimeOfDay _selectedTime = const TimeOfDay(hour: 7, minute: 0);
+  bool _daily = true; // alarm setiap hari
+  bool _isSaved = false;
+
+  String _formatTime(TimeOfDay time) {
+    final h = time.hour.toString().padLeft(2, '0');
+    final m = time.minute.toString().padLeft(2, '0');
+    return '$h:$m';
+  }
+
+  Future<void> _pickTime() async {
+    final picked = await showTimePicker(
+      context: context,
+      initialTime: _selectedTime,
+    );
+
+    if (picked != null) {
+      setState(() {
+        _selectedTime = picked;
+        _isSaved = false; // kalau diubah, belum tersimpan
+      });
+    }
+  }
+
+  void _saveAlarm() {
+    // Saat ini hanya simulasi penyimpanan, belum benar-benar set alarm sistem.
+    setState(() {
+      _isSaved = true;
+    });
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          'Alarm disimpan pada ${_formatTime(_selectedTime)}'
+          '${_daily ? ' (setiap hari)' : ''}',
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(24.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            'Pengaturan Alarm',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 16),
+
+          // Jam yang dipilih
+          Row(
+            children: [
+              const Icon(Icons.alarm, size: 32),
+              const SizedBox(width: 12),
+              Text(
+                _formatTime(_selectedTime),
+                style: const TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+
+          const SizedBox(height: 16),
+
+          ElevatedButton.icon(
+            onPressed: _pickTime,
+            icon: const Icon(Icons.access_time),
+            label: const Text('Pilih Jam'),
+          ),
+
+          const SizedBox(height: 24),
+
+          SwitchListTile(
+            title: const Text('Alarm setiap hari'),
+            subtitle: const Text('Jalankan alarm pada jam yang sama setiap hari'),
+            value: _daily,
+            onChanged: (val) {
+              setState(() {
+                _daily = val;
+                _isSaved = false;
+              });
+            },
+          ),
+
+          const Spacer(),
+
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: _saveAlarm,
+              child: Text(_isSaved ? 'Alarm Tersimpan' : 'Simpan Alarm'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

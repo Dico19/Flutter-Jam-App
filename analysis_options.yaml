@@ -1,0 +1,11 @@
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+
+  errors:
+    unused_import: ignore
+    unused_local_variable: ignore
+    dead_code: ignore
+    unnecessary_this: ignore
+    prefer_const_constructors: ignore
+    prefer_final_fields: ignore
