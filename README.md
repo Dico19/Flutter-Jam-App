@@ -136,3 +136,15 @@ Dibuat dengan Flutter dan UI modern yang halus, cocok sebagai project pemula hin
 - animasi
 - UI/UX Flutter
 - navigasi multi-layer
+
+🗂️ Struktur Folder Project
+Struktur standar Flutter:
+- lib/
+- android/
+- ios/
+- web/
+- windows/
+- linux/
+- macos/
+- pubspec.yaml
+- README.md
