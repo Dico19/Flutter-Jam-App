@@ -148,3 +148,17 @@ Struktur standar Flutter:
 - macos/
 - pubspec.yaml
 - README.md
+
+👨‍💻 Developer
+- Dibuat oleh:
+- Ahmad Na'im Bashiroh
+- Project Aplikasi Jam Flutter - Dicoding
+
+📝 Riwayat Commit
+Repository ini menggunakan commit yang jelas, contoh:
+✅ Upload pertama aplikasi jam Flutter
+✅ Menambahkan fitur Jam Dunia 100 kota
+✅ Menyempurnakan UI Beranda
+✅ Perbaikan Timer dan Stopwatch
+
+![WhatsApp Image 2025-12-03 at 19 34 39_8f054d14](https://github.com/user-attachments/assets/9e5505e0-1902-49fe-8c0a-d3bcd6101e03)
