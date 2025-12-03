@@ -43,6 +43,7 @@ UI dibuat modern dengan:
 2. Dekorasi lingkaran blur
 3. Kartu fitur dengan ikon asli alarm/clock
 Beranda berfungsi sebagai pusat informasi waktu dan shortcut ke semua fitur.
+![WhatsApp Image 2025-12-03 at 19 34 39_330f7c23](https://github.com/user-attachments/assets/326db5b5-23f7-477a-ac70-9a03b86975f3)
 
 🟩 Layer 2 — Alarm
 Layar untuk membuat alarm harian.
@@ -57,6 +58,7 @@ Pilih:
     - Snooze (berapa kali & berapa menit)
 4. Toggle ON/OFF alarm.
 Alarm belum memakai background notification (karena itu butuh backend seperti WorkManager), namun alarm dapat bekerja secara simulasi di dalam aplikasi.
+![WhatsApp Image 2025-12-03 at 19 34 39_a63fbc9a](https://github.com/user-attachments/assets/2470150b-19e6-4f99-aeb0-102bfc15868b)
 
 🟨 Layer 3 — Jam Dunia
 Menampilkan waktu dari berbagai kota besar dunia.
@@ -71,6 +73,7 @@ Fitur Jam Dunia:
     - Globe view (animasi bola dunia)
     - Transisi animasi saat memilih kota
 Jam dunia diupdate real-time (tiap detik) menggunakan UTC.
+![WhatsApp Image 2025-12-03 at 19 34 39_9012949f](https://github.com/user-attachments/assets/8d299826-5b39-4a55-bc98-6ef3f662894c)
 
 🟧 Layer 4 — Stopwatch
 Stopwatch modern dengan akurasi tinggi.
@@ -81,6 +84,7 @@ Fitur Stopwatch:
 4. Timer berjalan presisi menggunakan Timer.periodic.
 5. Angka tampil besar dan mudah dibaca.
 Stopwatch tetap berjalan selama aplikasi aktif di layar.
+![WhatsApp Image 2025-12-03 at 19 34 40_15ab13a8](https://github.com/user-attachments/assets/4e30e05c-0f33-4893-82a9-5c8ab9574718)
 
 🟥 Layer 5 — Timer
 Timer untuk menghitung mundur.
@@ -92,6 +96,7 @@ Fitur Timer:
 3. Animasi countdown mulus
 4. Pesan saat waktu hampir habis
 Timer belum memiliki background notification (perlu backend), tetapi countdown berjalan sempurna saat aplikasi terbuka.
+![WhatsApp Image 2025-12-03 at 19 34 40_e74d1fe4](https://github.com/user-attachments/assets/9a2f9b79-80e1-446c-9445-7d648a4e0cb6)
 
 🛠 Teknologi yang Digunakan
 1. Flutter (Dart)
@@ -160,5 +165,3 @@ Repository ini menggunakan commit yang jelas, contoh:
 ✅ Menambahkan fitur Jam Dunia 100 kota
 ✅ Menyempurnakan UI Beranda
 ✅ Perbaikan Timer dan Stopwatch
-
-![WhatsApp Image 2025-12-03 at 19 34 39_8f054d14](https://github.com/user-attachments/assets/9e5505e0-1902-49fe-8c0a-d3bcd6101e03)
