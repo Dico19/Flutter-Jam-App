@@ -165,7 +165,7 @@ Struktur standar Flutter:
 
 📝 Riwayat Commit
 Repository ini menggunakan commit yang jelas, contoh:
-✅ Upload pertama aplikasi jam Flutter
-✅ Menambahkan fitur Jam Dunia 100 kota
-✅ Menyempurnakan UI Beranda
-✅ Perbaikan Timer dan Stopwatch
+- ✅ Upload pertama aplikasi jam Flutter
+- ✅ Menambahkan fitur Jam Dunia 100 kota
+- ✅ Menyempurnakan UI Beranda
+- ✅ Perbaikan Timer dan Stopwatch
