@@ -8,6 +8,7 @@ PRODI SISTEM INFORMASI
 FAKULTAS ILMU KOMPUTER
 UNIVERSITAS BINA BANGSA
 
+---
 
 📱 Aplikasi Jam — Flutter
 Aplikasi ini adalah aplikasi jam multifungsi berbasis Flutter, dengan 5 fitur utama:
@@ -101,6 +102,8 @@ Fitur Timer:
 Timer belum memiliki background notification (perlu backend), tetapi countdown berjalan sempurna saat aplikasi terbuka.
 
 ![WhatsApp Image 2025-12-03 at 19 34 40_e74d1fe4](https://github.com/user-attachments/assets/9a2f9b79-80e1-446c-9445-7d648a4e0cb6)
+
+---
 
 🛠 Teknologi yang Digunakan
 1. Flutter (Dart)
