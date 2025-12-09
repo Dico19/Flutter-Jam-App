@@ -19,6 +19,8 @@ Aplikasi ini adalah aplikasi jam multifungsi berbasis Flutter, dengan 5 fitur ut
 5. Timer
 Aplikasi ini dirancang dengan UI modern, tampilan gelap (dark mode), animasi halus, dan pengalaman pengguna yang mudah.
 
+---
+
 🧭 Navigasi Layar
 Aplikasi menggunakan tab bar (BottomNavigationBar) dengan 5 tab utama:
 - 🏠 Beranda
