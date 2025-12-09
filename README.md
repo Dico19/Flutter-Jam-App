@@ -98,6 +98,7 @@ Fitur Stopwatch:
 4. Timer berjalan presisi menggunakan Timer.periodic.
 5. Angka tampil besar dan mudah dibaca.
 Stopwatch tetap berjalan selama aplikasi aktif di layar.
+
 ![WhatsApp Image 2025-12-03 at 19 34 40_15ab13a8](https://github.com/user-attachments/assets/4e30e05c-0f33-4893-82a9-5c8ab9574718)
 
 ---
