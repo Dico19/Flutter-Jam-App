@@ -30,6 +30,8 @@ Aplikasi menggunakan tab bar (BottomNavigationBar) dengan 5 tab utama:
 - ⏲ Pewaktu
 Setiap fitur berada di layer masing-masing (Layer 1–5).
 
+---
+
 🟦 Layer 1 — Beranda
 Layar pertama yang muncul saat aplikasi dibuka.
 Fitur Beranda:
@@ -49,6 +51,8 @@ Beranda berfungsi sebagai pusat informasi waktu dan shortcut ke semua fitur.
 
 ![WhatsApp Image 2025-12-03 at 19 34 39_330f7c23](https://github.com/user-attachments/assets/326db5b5-23f7-477a-ac70-9a03b86975f3)
 
+---
+
 🟩 Layer 2 — Alarm
 Layar untuk membuat alarm harian.
 Fitur Alarm:
@@ -64,6 +68,8 @@ Pilih:
 Alarm belum memakai background notification (karena itu butuh backend seperti WorkManager), namun alarm dapat bekerja secara simulasi di dalam aplikasi.
 
 ![WhatsApp Image 2025-12-03 at 19 34 39_a63fbc9a](https://github.com/user-attachments/assets/2470150b-19e6-4f99-aeb0-102bfc15868b)
+
+---
 
 🟨 Layer 3 — Jam Dunia
 Menampilkan waktu dari berbagai kota besar dunia.
@@ -81,6 +87,8 @@ Jam dunia diupdate real-time (tiap detik) menggunakan UTC.
 
 ![WhatsApp Image 2025-12-03 at 19 34 39_9012949f](https://github.com/user-attachments/assets/8d299826-5b39-4a55-bc98-6ef3f662894c)
 
+---
+
 🟧 Layer 4 — Stopwatch
 Stopwatch modern dengan akurasi tinggi.
 Fitur Stopwatch:
@@ -91,6 +99,8 @@ Fitur Stopwatch:
 5. Angka tampil besar dan mudah dibaca.
 Stopwatch tetap berjalan selama aplikasi aktif di layar.
 ![WhatsApp Image 2025-12-03 at 19 34 40_15ab13a8](https://github.com/user-attachments/assets/4e30e05c-0f33-4893-82a9-5c8ab9574718)
+
+---
 
 🟥 Layer 5 — Timer
 Timer untuk menghitung mundur.
@@ -119,12 +129,16 @@ Timer belum memiliki background notification (perlu backend), tetapi countdown b
    - Container + Card
 6. Struktur kode bersih & modular
 
+---
+
 📦 Cara Menjalankan Aplikasi
 1. Install Flutter SDK
 2. Clone project
 3. Jalankan di terminal:
    flutter pub get
    flutter run
+
+---
 
 🎨 Desain UI
 Aplikasi menggunakan desain:
@@ -134,6 +148,8 @@ Aplikasi menggunakan desain:
 4. Style modern seperti aplikasi jam bawaan Samsung/Google
 Konsisten rapi pada setiap layer.
 
+---
+
 🚀 Rencana Pengembangan
 Fitur masa depan yang bisa ditambahkan:
 1. Alarm dengan notifikasi background (WorkManager)
@@ -141,6 +157,8 @@ Fitur masa depan yang bisa ditambahkan:
 3. Tema terang/gelap otomatis
 4. Suara alarm custom
 5. Simpan kota/alarm ke penyimpanan lokal (SharedPreferences)
+
+---
 
 ❤️ Kesimpulan
 Aplikasi ini adalah aplikasi jam yang lengkap dengan 5 fitur utama.
@@ -150,6 +168,8 @@ Dibuat dengan Flutter dan UI modern yang halus, cocok sebagai project pemula hin
 - animasi
 - UI/UX Flutter
 - navigasi multi-layer
+
+---
 
 🗂️ Struktur Folder Project
 Struktur standar Flutter:
@@ -163,10 +183,14 @@ Struktur standar Flutter:
 - pubspec.yaml
 - README.md
 
+---
+
 👨‍💻 Developer
 - Dibuat oleh:
 - Ahmad Na'im Bashiroh
 - Project Aplikasi Jam Flutter - Dicoding
+
+---
 
 📝 Riwayat Commit
 Repository ini menggunakan commit yang jelas, contoh:
